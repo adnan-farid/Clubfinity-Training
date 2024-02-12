@@ -1,0 +1,7 @@
+20240208	14:04:15	f4ae8dc4-daf9-4ae7-ac87-b84855361ad4	/new-page.html	GET
+20240208	14:04:44	b0e1a455-1b83-4dd1-bb54-f6e82b9bec76	/new-page.html	GET
+20240208	14:04:44	ac3a4e8e-8c3c-4622-b860-e7950b9db198	/css/style.css	GET
+20240208	14:04:44	869fa3f0-8502-4ea3-9943-fb0a09f1e413	/img/img1.jpg	GET
+20240208	14:05:07	5372cf21-6b9b-45cf-9a70-a01d48ae5b47	/data.json	GET
+20240208	14:05:07	69899cdf-430d-4b5b-aa96-2924c62b4be1	/css/style.css	GET
+20240208	14:05:14	7db56ac3-bceb-4dd7-878a-0ee986851880	/data/data.json	GET
