@@ -1,29 +1,39 @@
-const NewPost = ({
-  handleSubmit, postTitle, setPostTitle, postBody, setPostBody
-}) => {
-  return (
-      <main className="NewPost">
-          <h2>New Post</h2>
-          <form className="newPostForm" onSubmit={handleSubmit}>
-              <label htmlFor="postTitle">Title:</label>
-              <input
-                  id="postTitle"
-                  type="text"
-                  required
-                  value={postTitle}
-                  onChange={(e) => setPostTitle(e.target.value)}
-              />
-              <label htmlFor="postBody">Post:</label>
-              <textarea
-                  id="postBody"
-                  required
-                  value={postBody}
-                  onChange={(e) => setPostBody(e.target.value)}
-              />
-              <button type="submit">Submit</button>
-          </form>
-      </main>
-  )
-}
+import { useParams, Link } from "react-router-dom";
 
-export default NewPost
+const PostPage = ({ posts, handleDelete }) => {
+  const { id } = useParams();
+  const post = posts.find((post) => post.id.toString() === id);
+  return (
+    <main className="PostPage">
+      <article className="post">
+        {post && (
+          <>
+            <h2>{post.title}</h2>
+            <p className="postDate">{post.datetime}</p>
+            <p className="postBody">{post.body}</p>
+            <Link to={`/edit/${post.id}`}>
+              <button className="editButton">Edit Post</button>
+            </Link>
+            <button
+              className="deleteButton"
+              onClick={() => handleDelete(post.id)}
+            >
+              Delete Post
+            </button>
+          </>
+        )}
+        {!post && (
+          <>
+            <h2>Post Not Found</h2>
+            <p>Well, that's disappointing.</p>
+            <p>
+              <Link to="/">Visit Our Homepage</Link>
+            </p>
+          </>
+        )}
+      </article>
+    </main>
+  );
+};
+
+export default PostPage;
