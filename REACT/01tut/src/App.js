@@ -30,7 +30,7 @@ function App() {
     setItems(listItems);
     localStorage.setItem('shoppinglist', JSON.stringify(listItems));
     setItems(listItems);
-  }
+  } 
   const handleSubmit = (e) => {
     e.preventDefault();
     if(!newItem) return;
