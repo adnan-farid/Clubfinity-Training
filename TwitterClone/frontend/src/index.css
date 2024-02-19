@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes titleAnim {
+  0%, 100% {
+    opacity: 1;
+    color: blue;
+  }
+  25% {
+    opacity: 1;
+    color: green;
+  }
+  50% {
+    opacity: 1;
+    color: red;
+  }
+  75% {
+    opacity: 1;
+    color: green;
+  }
+}
+
+h1 {
+  text-align: center;
+  animation: titleAnim 4s ease-in-out infinite;
+}
+
+
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0c85d0;
+}
+
+div {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  margin: 0;
+  color: #555;
+}
+
+p {
+  color: #666;
+}
